@@ -41,6 +41,7 @@ public class ConversationScreen : MonoBehaviour {
 		playerSpeakerImage.sprite = playerSpeaker.Sprite;
 		otherSpeakerImage.sprite = speaker.Sprite;
 		conversation = speaker.DefaultConversation;
+		ShowConversationText();
 	}
 
 	private void ShowConversationText() {

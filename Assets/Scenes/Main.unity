@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 1180721524}
-  rotateSpeed: 30
+  rotateSpeed: 80
   playerForward: {fileID: 257231296}
 --- !u!1 &570935979
 GameObject:
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  name: Mole
+  name: Mole in need
   defaultConversation: {fileID: 11400000, guid: 45789e2c6ab90c54e80e6d46a3223002,
     type: 2}
 --- !u!114 &778434316
