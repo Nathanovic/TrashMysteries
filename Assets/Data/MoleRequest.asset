@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285df0515e16f0645b57ec0a66eaf11c, type: 3}
+  m_Name: MoleRequest
+  m_EditorClassIdentifier: 
+  Texts:
+  - Hey there!
+  - Hello mister mole.
+  - Can you help me please?
+  - Of course! How can I help?
+  - Well, I haven't seen my brother in days! Last time I saw him he was digging holes
+    beneath some boulders over there.
+  - I'll see what I can do. Do you have any idea why he was caving over there?
+  - He said he was digging for treasures, seemed quite obsessed to me.
+  - Thanks, I'll see if I can find him!
