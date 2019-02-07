@@ -11,6 +11,10 @@ public class Animal : MonoBehaviour, IInteractable {
 		return hasInteractionText;
 	}
 
+	public string InteractionNotification() {
+		return null;
+	}
+
 	public void Interact(Action onFinishedInteraction) {
 		hasInteractionText = false;
 		conversationScreen.Show(defaultConversation, onFinishedInteraction);
