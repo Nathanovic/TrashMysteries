@@ -10,19 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 285df0515e16f0645b57ec0a66eaf11c, type: 3}
-  m_Name: AlbatrosInNeed
+  m_Name: AlbatrosHelpRequest
   m_EditorClassIdentifier: 
   Speaker: {fileID: 11400000, guid: 7f49b743f47a8964fa151f953c818ec6, type: 2}
   AllLines:
-  - Text: Hi there sir
+  - Text: Help!
     SpeakerEmote: 0
-    PlayerEmote: 0
-    IsPlayerText: 1
-  - Text: Hi!
-    SpeakerEmote: 1
     PlayerEmote: 0
     IsPlayerText: 0
-  - Text: Bye!
+  - Text: Alstjeblieft, help me ik zit vast in dit net!
+    SpeakerEmote: 3
+    PlayerEmote: 0
+    IsPlayerText: 0
+  - Text: Wat erg! Hoe kan ik je daar ooit uit krijgen?
     SpeakerEmote: 0
+    PlayerEmote: 1
+    IsPlayerText: 1
+  - Text: Probeer iets scherps te vinden waarmee het net los kunt snijden.
+    SpeakerEmote: 2
+    PlayerEmote: 1
+    IsPlayerText: 0
+  - Text: Is goed, ik ga meteen op zoek!
+    SpeakerEmote: 2
     PlayerEmote: 1
     IsPlayerText: 1
