@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285df0515e16f0645b57ec0a66eaf11c, type: 3}
   m_Name: MoleInNeed
   m_EditorClassIdentifier: 
-  Texts:
-  - Help!
-  - "Hey! You are mister mole's brother, isn't it?\t"
-  - "Yes, please help me!\nI am stuck here!\t"
-  - Wait, I have to get a spade to get you out
-  - Please be fast... I am stuck in this trash.
+  Speaker: {fileID: 11400000, guid: 7f49b743f47a8964fa151f953c818ec6, type: 2}
+  AllLines:
+  - Text: Help!
+    SpeakerEmote: 3
+    PlayerEmote: 2
+    IsPlayerText: 0
+  - Text: Wow, you're pretty stuck....
+    SpeakerEmote: 2
+    PlayerEmote: 2
+    IsPlayerText: 1
+  - Text: Please get me out of here
+    SpeakerEmote: 3
+    PlayerEmote: 0
+    IsPlayerText: 0
+  - Text: I will get it!
+    SpeakerEmote: 3
+    PlayerEmote: 0
+    IsPlayerText: 1

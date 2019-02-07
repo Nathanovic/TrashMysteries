@@ -1,16 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Speaker))]
 public class Animal : MonoBehaviour, IInteractable {
 
 	[SerializeField]private ConversationScreen conversationScreen;
-	private Speaker speaker;
+	[SerializeField] private Conversation defaultConversation;
 	private bool hasInteractionText = true;
-
-	private void Awake() {
-		speaker = GetComponent<Speaker>();
-	}
 
 	public bool CanInteract() {
 		return hasInteractionText;
@@ -18,7 +13,7 @@ public class Animal : MonoBehaviour, IInteractable {
 
 	public void Interact(Action onFinishedInteraction) {
 		hasInteractionText = false;
-		conversationScreen.Show(speaker, onFinishedInteraction);
+		conversationScreen.Show(defaultConversation, onFinishedInteraction);
 	}
 
 }

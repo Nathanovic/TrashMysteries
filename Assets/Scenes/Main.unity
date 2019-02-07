@@ -1265,7 +1265,6 @@ GameObject:
   - component: {fileID: 719040404}
   - component: {fileID: 719040403}
   - component: {fileID: 719040402}
-  - component: {fileID: 719040408}
   m_Layer: 0
   m_Name: Mole
   m_TagString: Untagged
@@ -1286,6 +1285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationScreen: {fileID: 1148340428}
+  defaultConversation: {fileID: 11400000, guid: 02e58406be18cad42be1bb9e471a8165,
+    type: 2}
 --- !u!135 &719040403
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1371,22 +1372,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &719040408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719040401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30a4c864254fde40bfadfd33ce8534c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  name: Mole
-  defaultConversation: {fileID: 11400000, guid: 02e58406be18cad42be1bb9e471a8165,
-    type: 2}
 --- !u!1 &778434314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1386,6 @@ GameObject:
   - component: {fileID: 778434318}
   - component: {fileID: 778434317}
   - component: {fileID: 778434316}
-  - component: {fileID: 778434315}
   m_Layer: 0
   m_Name: MoleInNeed
   m_TagString: Untagged
@@ -1409,22 +1393,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &778434315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778434314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30a4c864254fde40bfadfd33ce8534c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  name: Mole in need
-  defaultConversation: {fileID: 11400000, guid: 45789e2c6ab90c54e80e6d46a3223002,
-    type: 2}
 --- !u!114 &778434316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,6 +1406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversationScreen: {fileID: 1148340428}
+  defaultConversation: {fileID: 11400000, guid: 45789e2c6ab90c54e80e6d46a3223002,
+    type: 2}
 --- !u!135 &778434317
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1775,7 +1745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleText: {fileID: 532189258}
   conversationText: {fileID: 1835556842}
-  playerSpeaker: {fileID: 570935986}
+  playerCharacter: {fileID: 11400000, guid: fc237d39f3f41cf46a7e5b3f31456323, type: 2}
   playerSpeakerImage: {fileID: 231624665}
   otherSpeakerImage: {fileID: 1736410977}
   continueKey: 32

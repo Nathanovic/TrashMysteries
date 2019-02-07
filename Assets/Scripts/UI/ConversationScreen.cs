@@ -9,7 +9,7 @@ public class ConversationScreen : MonoBehaviour {
 	[Header("References")]
 	[SerializeField] private Text titleText;
 	[SerializeField] private Text conversationText;
-	[SerializeField] private Speaker playerSpeaker;
+	[SerializeField] private Character playerCharacter;
 	[SerializeField] private Image playerSpeakerImage;
 	[SerializeField] private Image otherSpeakerImage;
 
@@ -33,25 +33,28 @@ public class ConversationScreen : MonoBehaviour {
 		}
 	}
 
-	public void Show(Speaker speaker, Action onDone) {
+	public void Show(Conversation conversation, Action onDone) {
+		this.conversation = conversation;
 		onInteractionClosedCallback = onDone;
+
 		canvasGroup.alpha = 1f;
 		currentConversationTextIndex = 0;
-		titleText.text = speaker.Name + ":";
-		playerSpeakerImage.sprite = playerSpeaker.Sprite;
-		otherSpeakerImage.sprite = speaker.Sprite;
-		conversation = speaker.DefaultConversation;
 		ShowConversationText();
 	}
 
 	private void ShowConversationText() {
-		if (currentConversationTextIndex >= conversation.Texts.Length) {
+		if (currentConversationTextIndex >= conversation.AllLines.Length) {
 			canvasGroup.alpha = 0f;
 			onInteractionClosedCallback?.Invoke();
 			return;
 		}
 
-		conversationText.text = conversation.Texts[currentConversationTextIndex];
+		Conversation.Lines textInformation = conversation.AllLines[currentConversationTextIndex];
+		conversationText.text = textInformation.Text;
+		string speakerName = textInformation.IsPlayerText ? playerCharacter.Name : conversation.Speaker.Name;
+		titleText.text = speakerName + ":";
+		playerSpeakerImage.sprite = playerCharacter.GetVisuals(textInformation.PlayerEmote);
+		otherSpeakerImage.sprite = playerCharacter.GetVisuals(textInformation.SpeakerEmote);
 	}
 	
 }

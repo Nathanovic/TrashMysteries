@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285df0515e16f0645b57ec0a66eaf11c, type: 3}
   m_Name: MoleRequest
   m_EditorClassIdentifier: 
-  Texts:
-  - Hey there!
-  - Hello mister mole.
-  - Can you help me please?
-  - Of course! How can I help?
-  - Well, I haven't seen my brother in days! Last time I saw him he was digging holes
-    beneath some boulders over there.
-  - I'll see what I can do. Do you have any idea why he was caving over there?
-  - He said he was digging for treasures, seemed quite obsessed to me.
-  - Thanks, I'll see if I can find him!
+  Speaker: {fileID: 11400000, guid: 7f49b743f47a8964fa151f953c818ec6, type: 2}
+  AllLines:
+  - Text: Hi there sir
+    SpeakerEmote: 0
+    PlayerEmote: 0
+    IsPlayerText: 1
+  - Text: Hi!
+    SpeakerEmote: 1
+    PlayerEmote: 0
+    IsPlayerText: 0
+  - Text: Bye!
+    SpeakerEmote: 0
+    PlayerEmote: 1
+    IsPlayerText: 1
