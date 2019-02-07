@@ -7,11 +7,14 @@ public class ConversationScreen : MonoBehaviour {
 	private CanvasGroup canvasGroup;
 
 	[Header("References")]
-	[SerializeField] private Text titleText;
+	[SerializeField] private GameObject playerTextContainer;
+	[SerializeField] private GameObject otherSpeakerTextContainer;
+	[SerializeField] private Text playerNameText;
+	[SerializeField] private Text otherNameText;
 	[SerializeField] private Text conversationText;
 	[SerializeField] private Character playerCharacter;
-	[SerializeField] private Image playerSpeakerImage;
-	[SerializeField] private Image otherSpeakerImage;
+	[SerializeField] private Image playerImage;
+	[SerializeField] private Image otherImage;
 
 	[Header("Settings")]
 	[SerializeField] private KeyCode continueKey;
@@ -37,6 +40,9 @@ public class ConversationScreen : MonoBehaviour {
 		this.conversation = conversation;
 		onInteractionClosedCallback = onDone;
 
+		playerNameText.text = playerCharacter.Name;
+		otherNameText.text = conversation.Speaker.Name;
+
 		canvasGroup.alpha = 1f;
 		currentConversationTextIndex = 0;
 		ShowConversationText();
@@ -51,10 +57,12 @@ public class ConversationScreen : MonoBehaviour {
 
 		Conversation.Lines textInformation = conversation.AllLines[currentConversationTextIndex];
 		conversationText.text = textInformation.Text;
-		string speakerName = textInformation.IsPlayerText ? playerCharacter.Name : conversation.Speaker.Name;
-		titleText.text = speakerName + ":";
-		playerSpeakerImage.sprite = playerCharacter.GetVisuals(textInformation.PlayerEmote);
-		otherSpeakerImage.sprite = playerCharacter.GetVisuals(textInformation.SpeakerEmote);
+
+		playerTextContainer.SetActive(textInformation.IsPlayerText);
+		otherSpeakerTextContainer.SetActive(!textInformation.IsPlayerText);
+
+		playerImage.sprite = playerCharacter.GetVisuals(textInformation.PlayerEmote);
+		otherImage.sprite = playerCharacter.GetVisuals(textInformation.SpeakerEmote);
 	}
 	
 }
