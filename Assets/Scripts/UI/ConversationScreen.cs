@@ -62,7 +62,7 @@ public class ConversationScreen : MonoBehaviour {
 		otherSpeakerTextContainer.SetActive(!textInformation.IsPlayerText);
 
 		playerImage.sprite = playerCharacter.GetVisuals(textInformation.PlayerEmote);
-		otherImage.sprite = playerCharacter.GetVisuals(textInformation.SpeakerEmote);
+		otherImage.sprite = conversation.Speaker.GetVisuals(textInformation.SpeakerEmote);
 	}
 	
 }

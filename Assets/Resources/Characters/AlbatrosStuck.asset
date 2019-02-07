@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975fd37cc60e78740a5a3a24b9cfc8c5, type: 3}
+  m_Name: AlbatrosStuck
+  m_EditorClassIdentifier: 
+  name: AlbatrosStuck
+  neutralVisuals: {fileID: 21300000, guid: 768613e75d020854b893348df15a2d13, type: 3}
+  happyVisuals: {fileID: 21300000, guid: b51df35c8e3839341ba4a3cdccf6adce, type: 3}
+  shockedVisuals: {fileID: 21300000, guid: 5982f60f98c5fdd4aa69dfbc0f91f0d1, type: 3}
+  sadVisuals: {fileID: 21300000, guid: cb830c4bd3add694897b27018cfe95bd, type: 3}
