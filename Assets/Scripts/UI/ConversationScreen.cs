@@ -20,7 +20,6 @@ public class ConversationScreen : MonoBehaviour {
 	[SerializeField] private KeyCode continueKey;
 
 	private Action onInteractionClosedCallback;
-	private bool isInteracting;
 	private Conversation conversation;
 	private int currentConversationTextIndex;
 
@@ -30,6 +29,7 @@ public class ConversationScreen : MonoBehaviour {
 	}
 
 	private void Update() {
+		if(canvasGroup.alpha == 0f) { return; }
 		if (Input.GetKeyUp(continueKey)) {
 			currentConversationTextIndex++;
 			ShowConversationText();

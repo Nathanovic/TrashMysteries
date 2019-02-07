@@ -32,4 +32,23 @@ public class Inventory : MonoBehaviour {
 		activeItems.Add(newVisualItem);
 	}
 
+	public bool ContainsItem(InventoryItem item) {
+		if(item == null) {
+			Debug.Log("Contains-item-check with item parameter value 'null'");
+			return false;
+		}
+
+		foreach (VisualInventoryItem inventoryItem in activeItems) {
+			Debug.Log("Check inventory item: " + inventoryItem.InventoryItem.name);
+			if (inventoryItem.InventoryItem == item) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public int ItemCount() {
+		return activeItems.Count;
+	}
+
 }

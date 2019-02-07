@@ -3,20 +3,22 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour, IInteractable {
 
-	[SerializeField]private ConversationScreen conversationScreen;
+	[SerializeField] protected ConversationScreen conversationScreen;
+	[AssetDropdown("Conversations", typeof(Conversation))]
 	[SerializeField] private Conversation defaultConversation;
-	private bool hasInteractionText = true;
 
-	public bool CanInteract() {
-		return hasInteractionText;
+	protected bool hasInteracted;
+
+	public virtual bool CanInteract() {
+		return !hasInteracted;
 	}
 
 	public string InteractionNotification() {
 		return null;
 	}
 
-	public void Interact(Action onFinishedInteraction) {
-		hasInteractionText = false;
+	public virtual void Interact(Action onFinishedInteraction) {
+		hasInteracted = true;
 		conversationScreen.Show(defaultConversation, onFinishedInteraction);
 	}
 
