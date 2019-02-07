@@ -17,12 +17,12 @@ public class Albatros : Animal {
 	}
 
 	public override void Interact(Action onFinishedInteraction) {
-		hasInteracted = true;
-		if (Inventory.Instance.ItemCount() == 0) {
+		if (!hasInteracted) {
 			base.Interact(onFinishedInteraction);
 			return;
 		}
 
+		hasInteracted = true;
 		bool playerHasCorrectItem = Inventory.Instance.ContainsItem(requiredItem);
 		if (playerHasCorrectItem) {
 			conversationScreen.Show(correctItemConversation, () => {

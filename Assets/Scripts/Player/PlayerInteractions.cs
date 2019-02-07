@@ -17,10 +17,10 @@ public class PlayerInteractions : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		IInteractable interactable = other.GetComponent<IInteractable>();
-
-		if (interactable == null) { return; }
 		if (IsInteracting) { return; }
+		IInteractable interactable = other.GetComponent<IInteractable>();
+		if (interactable == null) { return; }
+		if (currentInteractable == interactable) { return; }
 		if (!interactable.CanInteract()) { return; }
 
 		string notificationText = interactable.InteractionNotification();
