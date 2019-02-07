@@ -18,7 +18,7 @@ MonoBehaviour:
     SpeakerEmote: 0
     PlayerEmote: 0
     IsPlayerText: 0
-  - Text: Alstjeblieft, help me ik zit vast in dit net!
+  - Text: Alstjeblieft, help me. Ik zit vast in dit net!
     SpeakerEmote: 3
     PlayerEmote: 0
     IsPlayerText: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     SpeakerEmote: 0
     PlayerEmote: 1
     IsPlayerText: 1
-  - Text: Probeer iets scherps te vinden waarmee het net los kunt snijden.
+  - Text: Probeer iets scherps te vinden waarmee je het net los kunt snijden.
     SpeakerEmote: 2
     PlayerEmote: 1
     IsPlayerText: 0

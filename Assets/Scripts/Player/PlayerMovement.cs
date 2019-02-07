@@ -28,7 +28,9 @@ public class PlayerMovement : MonoBehaviour {
 		if (input != Vector3.zero) {
 			Vector3 relativeInput = cameraForward.TransformDirection(input);
 			transform.forward = relativeInput;
-			rigidbody.velocity = relativeInput * moveSpeed;
+			Vector3 moveVelocity = relativeInput * moveSpeed;
+			moveVelocity.y = rigidbody.velocity.y;
+			rigidbody.velocity = moveVelocity;
 		}
 	}
 
