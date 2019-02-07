@@ -26,6 +26,7 @@ public class Albatros : Animal {
 		bool playerHasCorrectItem = Inventory.Instance.ContainsItem(requiredItem);
 		if (playerHasCorrectItem) {
 			conversationScreen.Show(correctItemConversation, () => {
+				GameManager.Instance.CompleteGame();
 				onFinishedInteraction?.Invoke();
 			});
 		} else {

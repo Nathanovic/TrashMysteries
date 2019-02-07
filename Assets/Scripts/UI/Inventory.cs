@@ -39,7 +39,6 @@ public class Inventory : MonoBehaviour {
 		}
 
 		foreach (VisualInventoryItem inventoryItem in activeItems) {
-			Debug.Log("Check inventory item: " + inventoryItem.InventoryItem.name);
 			if (inventoryItem.InventoryItem == item) {
 				return true;
 			}

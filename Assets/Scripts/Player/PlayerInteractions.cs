@@ -7,7 +7,9 @@ public class PlayerInteractions : MonoBehaviour {
 	private IInteractable currentInteractable;
 
 	private void Update() {
-		if(currentInteractable == null) { return; }
+		if (!GameManager.Instance.IsGamePlaying) { return; }
+		if (currentInteractable == null) { return; }
+
 		if (Input.GetButtonDown("PickUp")) {
 			currentInteractable.Interact(null);
 			currentInteractable = null;
