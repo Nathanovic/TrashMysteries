@@ -24,6 +24,7 @@ public class Inventory : MonoBehaviour {
 			deactivatedItems.RemoveAt(0);
 		} else {
 			newVisualItem = Instantiate(itemTemplate, transform);
+			newVisualItem.gameObject.name = "ItemVisual";
 		}
 		
 		newVisualItem.gameObject.SetActive(true);

@@ -3,14 +3,11 @@ using UnityEngine.UI;
 
 public class VisualInventoryItem : MonoBehaviour {
 
-	private Image image;
-
-	private void Awake() {
-		image = GetComponent<Image>();
-	}
+	[Header("References")]
+	[SerializeField] private Image itemImage;
 
 	public void Show(InventoryItem item) {
-		image.sprite = item.Visual;
+		itemImage.sprite = item.Visual;
 	}
 
 }
