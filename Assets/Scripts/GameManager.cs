@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -17,6 +18,13 @@ public class GameManager : MonoBehaviour {
 
 	private void Awake() {
 		IsGamePlaying = true;
+	}
+
+	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Debug.Log("Reload scene for testing purposes");
+			SceneManager.LoadScene(0);
+		}
 	}
 
 	public void CompleteGame() {
